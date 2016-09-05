@@ -31,6 +31,7 @@ body
   overflow-y: auto
   overflow-x: hidden
   background-color: #628292
+  min-width: 320px
 
 h1
   color: white
@@ -65,45 +66,6 @@ a
   &:visited
     color: inherit
 
-input, textarea
-  border: none
-  height: 50px
-  border-bottom: solid 1px #e1e1e1
-  width: 205px
-  font-size: 16px
-
-textarea
-  color: #909090
-
-input.error
-  border-bottom: solid 2px #ee6e73
-
-input::-webkit-input-placeholder
-  font-family: $defaultFont
-  color: #909090
-  font-size: 16px
-  font-weight: 400
-  // line-height: 50px
-
-input::-moz-placeholder
-  font-family: $defaultFont
-  color: #909090
-  font-size: 16px
-  font-weight: 400
-  // line-height: 50px
-input:-moz-placeholder
-  font-family: $defaultFont
-  color: #909090
-  font-size: 16px
-  font-weight: 400
-  // line-height: 50px
-input:-ms-input-placeholder
-  color: #909090
-  font-family: $defaultFont
-  font-size: 16px
-  line-height: 50px
-  font-weight: 400
-
 .flexB
   display: flex
   align-items: center
@@ -114,28 +76,25 @@ input:-ms-input-placeholder
 .wrappContent
   margin: 0 auto
   max-width: 1400px
+  padding: 30px
+  @media #{$medium}
+    padding: 0
 
-.btn
-  position: relative;
-  display: block;
-  min-width: 388px;
-  padding: 12px 20px;
-  height: 48px;
-  margin: 2em;
-  border: none;
-  outline: none;
-  letter-spacing: 0;
-  font-weight: bold;
-  background: #dfdfdf;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 3px;
-  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1)
-  will-change: opacity, transform
-  transition-delay: 0.2s
-  &:active
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2)
-    transition-delay: 0s
+.skew
+  position: relative
+  z-index: 2
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    overflow: visible
+    width: 100%
+    background: #fff
+    z-index: -1
+    transform: skewY(10deg)
+    backface-visibility: initial
 
 .line
   display: inline-block
@@ -149,53 +108,81 @@ input:-ms-input-placeholder
   path
     fill: #306497
 
+// Footer ----------------------------------------------------------------------
+.footer
+  display: flex
+  height: 90px
+  background-color: #f4f4f4
+  background-image: linear-gradient(to top, #306497 0%, #306497 58%, #155481 100%)
+  color: #fff
+  align-items: center
+  z-index: 3
 
-// @for $i from 1 through 7
-//   .div#{$i}
+.contact
+  max-width: 1400px
+  position: relative
+  width: 100%
+  margin: -125px auto 0
+  height: 668px
+  .contactInfo
+    width: 385px
+    height: 524px
+    color: #fff
+    right: 242px
+    position: absolute
+    top: 0
+    .wrappContact
 
-// svg
-//   display: inline-block
-//   width: 1920px
-//   height: 1090px
-//   overflow: visible
+      height: 460px
+      padding: 63px 36px 0px 46px
 
-// .svg-icon
-//   cursor: pointer
-//   path
-//     stroke: rgba(255, 255, 255, 0.9)
-//     // fill: none
-//     stroke-width: 1
+    .skew
+
+      &:before
+        background-color: #dc812e
+      &:after
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        bottom: -30px
+        overflow: visible
+        width: 100%
+        background-image: url(../images/backContact.svg)
+        background-position: bottom
+        background-repeat: no-repeat
+        z-index: -1
 
 
-// .login__icon
-//   &.happy path
-//     stroke-dasharray: 73.50196075439453
-//     stroke-dashoffset: 73.50196075439453
-//     animation: animatePath 2s 0.5s forwards
-//   &.name path
-//     stroke-dasharray: 73.50196075439453
-//     stroke-dashoffset: 73.50196075439453
-//     animation: animatePath 2s 0.5s forwards
-//   &.pass path
-//     stroke-dasharray: 92.10662841796875
-//     stroke-dashoffset: 92.10662841796875
-//     animation: animatePath 2s 0.5s forwards
+    .title
+      font-size: 36px
+      font-weight: 700
+      font-family: $defaultFontThin
+      margin-bottom: 26px
+    .addresstitle
+      font-size: 14px
+      font-weight: 700
+      font-family: $defaultFontBold
+      text-transform: uppercase
+      margin-top: 30px
+      margin-bottom: 8px
+    p,
+    a
+      font-size: 18px
+      font-weight: 300
+      line-height: 24px
+      text-decoration: none
+      color: #fff
+      &.email
+        text-decoration: underline
 
-@keyframes animatePath
-  to
-    stroke-dashoffset: 0
-
-=clearfix
-  *zoom: 1
-  &::after
-    content: ''
-    display: table
-    line-height: 0
-    clear: both
+#map
+  width: 100%
+  height: 100%
 
 @import _sprite
 @import _header
 @import _sectionFirst
 @import _sectionSecond
 @import _sectionThird
-
+@import _sectionForth

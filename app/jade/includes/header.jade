@@ -2,7 +2,14 @@ mixin header
   header.header
     .wrappContent.flexB
       a.logo(href="")
-        img(src="images/logo.svg", alt="")
+        img(src="images/logo.png", alt="")
       .address
         a.phone(href="tel:+74956096080")  +7 (495) 609 60 80
         a.email(href="mailto:info@mfmg.ru") info@mfmg.ru
+  button(data-target="modal1" class="btn modal-trigger") Modal
+  #modal1.modal
+    .modal-content
+    h4 Modal Header
+    p A bunch of text
+    .modal-footer
+    a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree

@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
     imageop = require('gulp-image-optimization'),
     imageminMozjpeg = require('imagemin-mozjpeg'),
-    //mainBowerFiles = require('gulp-main-bower-files'),
+    mainBowerFiles = require('gulp-main-bower-files'),
 
     browserSync = require('browser-sync').create();
 
@@ -114,23 +114,23 @@ gulp.task('images', function(cb) {
   })).pipe(gulp.dest('dist/images/upload')).on('end', cb).on('error', cb);
 });
 
-/*##############################
-
-gulp.task 'main-bower-files', ->
-  filterJS = gulpFilter('*.js', { restore: true })
-  gulp.src('./bower.json').pipe(mainBowerFiles(
-    overrides:
-      almond:
+/*Bower############################## */
+gulp.task('main-bower-files', function() {
+  gulp.src('./bower.json').pipe(mainBowerFiles({
+    overrides: {
+      almond: {
         "ignore": true
-      jquery:
+      },
+      jquery: {
         main: ["./dist/jquery.min.js"]
-      "slick-carousel":
-        main: ["./**]
-    ))
-    # .pipe(filterJS)
-    # .pipe(filterJS.restore)
-    .pipe gulp.dest('dist/lib')
-    */
+      },
+      "materialize": {
+        main: ["./js/leanModal.js", "./**/velocity.min.js"]
+      }
+    }
+  })).pipe(gulp.dest('dist/lib'));
+});
+
 /*==============================================================================
 Build Production
 ==============================================================================*/

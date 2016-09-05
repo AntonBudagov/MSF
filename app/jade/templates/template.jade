@@ -3,8 +3,8 @@ include ../includes/header
 include ../includes/sectionFirst
 include ../includes/sectionSecond
 include ../includes/sectionThird
-
-//- include ../includes/sectionFirst
+include ../includes/sectionForth
+include ../includes/footer
 //- include ../includes/sectionForth
 //- include ../includes/sectionFirst
 //-
@@ -22,14 +22,20 @@ html
 
   body
     block content
+
     //- CDN============================
     //- CSS
     //- link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css")
     //- JS
     script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+    script(src="lib/materialize/js/velocity.min.js")
+    script(src="lib/materialize/js/leanModal.js")
     //- script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js")
-    //- script(src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js")
     //- CDN============================
 
     //- Main Js
+    script(type='text/javascript',  src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU&scroll=false")
     script(src="js/main.js")
+
+    a.waves-effect.waves-light.btn.modal-trigger(href='#modal1') Modal
+

@@ -1,0 +1,23 @@
+{
+  "name": "dot",
+  "description": "crate dots and move them",
+  "main": "index.js",
+  "authors": [
+    "Serokruluy"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AntonBudagov/MSF",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "materialize": "^0.97.7"
+
+  }
+}
