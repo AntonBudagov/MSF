@@ -1,14 +1,18 @@
 .sectionForth
   .skew
-    padding-top: 85px
+    padding-top: 35px
     min-height: 750px
+    padding-bottom: 60px
     &:before
       background-color: #f4f4f4
+
+  .title
+    text-align: center
   h2
     color: #231f20
     font-size: 60px
     font-weight: 100
-    text-align: left
+    text-align: center
     margin-bottom: 8px
 
   .thumbnailWrapp
@@ -21,7 +25,7 @@
     font-size: 18px
     font-weight: 700
     line-height: 22px
-    margin-bottom: 16px
+    margin-bottom: 8px
 
   .link
     color: #306497
@@ -45,15 +49,18 @@
     flex-wrap: wrap
     max-width: 1132px
 
-
   .massMedia
-    max-width: 538px
+    max-width: 100%
+    width: 100%
     .desc
       margin-top: 20px
     .link
-      margin-bottom: 28px
+      margin-bottom: 20px
     .thumbnailWrapp
       position: relative
+      margin-top: 15px
+      display: flex
+      align-items: center
       img
         position: absolute
         left: 0
@@ -61,15 +68,45 @@
         margin: auto
 
   .news
-    max-width: 535px
+    max-width: 100%
+    width: 100%
+    margin-top: 20px
     .title
 
       margin-bottom: 14px
     .date
       font-size: 14px
-      margin-bottom: 7px
+      margin-bottom: 2px
     .listNews
       .new
-        margin-top: 50px
+        margin-top: 10px
         &:first-child
           margin-top: 0
+
+@media #{$medium}
+  .sectionForth
+    .skew
+      padding-top: 85px
+      padding-bottom: 0px
+
+    h2
+      text-align: left
+
+    .title
+      text-align: left
+
+
+    .massMedia
+      max-width: 538px
+      .link
+        margin-bottom: 28px
+
+    .news
+      max-width: 535px
+      margin-top: 0
+      .date
+        font-size: 14px
+        margin-bottom: 7px
+      .listNews
+        .new
+          margin-top: 50px

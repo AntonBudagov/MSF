@@ -2,10 +2,10 @@
   width: 100%
   position: relative
   background-image: url(../images/back.svg)
-  height: 808px
+  height: 100%
   background-color: #306497
   background-repeat: no-repeat
-
+  padding-bottom: 60px
   h2
     margin-top: 82px
   .description
@@ -55,29 +55,32 @@
         font-weight: 300
         line-height: 22px
 
-    .counter
-      margin: 36px auto 32px
-      span
-        font-family: $defaultFontThin
-        font-size: 22px
-        font-weight: 100
-        color: #67b8ef
+  .counter
+    margin: 36px auto 32px
+    position: absolute
+    left: 0
+    right: 0
+    text-align: center
+    span
+      font-family: $defaultFontThin
+      font-size: 22px
+      font-weight: 100
+      color: #67b8ef
 
-        &:nth-child(2)
-          padding: 0 7px
-        &.active
-          color: #fff
+      &:nth-child(2)
+        padding: 0 7px
+      &.active
+        color: #fff
 
 .sliderUser
   .skew
     min-height: 743px
+    padding-bottom: 60px
   .user
     margin: 0 auto
     text-align: center
-    position: absolute
-    top: -158px
-    left: 0
-    right: 0
+    position: relative
+
     .avatarUser
 
       width: 305px
@@ -112,7 +115,7 @@
   .description
     max-width: 1181px
     margin: 0 auto
-    padding-top: 277px
+    padding-top: 0
     justify-content: space-between
     align-items: flex-start
     > *
@@ -123,10 +126,42 @@
 
   .leftText,
   .rightText
-    // margin: 0 auto
+    margin: 0 auto
     max-width: 558px
     width: 100%
 
     p
       margin-top: 27px
       line-height: 21px
+
+
+
+@media #{$xLarge}
+  .sectionThird
+    height: 808px
+    padding-bottom: 0px
+  .sliderUser
+    .skew
+      padding-bottom: 0
+    .user
+      margin: 0 auto
+      text-align: center
+      position: absolute
+      top: -158px
+      left: 0
+      right: 0
+
+    .description
+      padding-top: 277px
+
+    .leftText,
+    .rightText
+      margin: auto
+
+
+
+
+// $small: "(min-width: 768px)"
+// $medium: "(min-width: 1024px)"
+// $large: "(min-width: 1200px)"
+// $xLarge: "(min-width: 1400px)"

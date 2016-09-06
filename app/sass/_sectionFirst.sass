@@ -18,9 +18,13 @@
         padding-right: 20px
         font-size: 20px
         letter-spacing: .5px
+        white-space: nowrap
+        display: flex
+        margin-bottom: 10px
       .email
         color: #fff
         font-size: 16px
+        white-space: nowrap
 
   .description
     max-width: 830px
@@ -28,8 +32,8 @@
 
     h1
       color: #fff
-      font-size: 100px
-      line-height: 95px
+      font-size: 42px
+      line-height: normal
       span
         &:first-child
           font-family: $defaultFontBold
@@ -51,24 +55,22 @@
   .infoCompany
     max-width: 830px
     justify-content: flex-start
-    margin-top: 48px
+    margin-top: 24px
     .info
       color: #fff
       display: flex
+      width: 100%
       .number
         display: flex
-        align-items: flex-end
-        &:first-child
-          width: 200px
-          margin-right: 47px
-        &:nth-child(2)
-          width: 175px
-          margin-right: 65px
+        align-items: center
+        width: 100%
+        flex-direction: column
+        text-align: center
         span
           &:first-child
-            font-size: 100px
+            font-size: 50px
             font-family: $defaultFontBold
-            line-height: 73px
+            line-height: normal
         span
           &:last-child
             padding-left: 14px
@@ -76,12 +78,49 @@
             font-weight: 300
             line-height: 24px
 
-@media #{$xLarge}
+@media #{$medium}
   .sectionFirst
     .header
       padding: 28px 0 0 0
 
+      .address
+        margin-top: 21px
+        .phone
+          display: inline
+          margin-bottom: 0px
+
+
     .description
       margin-top: 106px
       margin-left: 93px
+      h1
+        font-size: 100px
+        line-height: 95px
+
+    .infoCompany
+      margin-top: 48px
+      .info
+        width: auto
+        .number
+          flex-direction: row
+          &:first-child
+            width: 200px
+            margin-right: 47px
+          &:nth-child(2)
+            width: 175px
+            margin-right: 65px
+          span
+            &:first-child
+              font-size: 100px
+              font-family: $defaultFontBold
+              line-height: 73px
+          span
+            &:last-child
+              padding-left: 14px
+              font-size: 24px
+              font-weight: 300
+              line-height: 24px
+    .desc
+      p
+        font-size: 24px
 

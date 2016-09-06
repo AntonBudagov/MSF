@@ -126,6 +126,9 @@ gulp.task('main-bower-files', function() {
       },
       "materialize": {
         main: ["./js/leanModal.js", "./**/velocity.min.js"]
+      },
+      "owl.carousel":{
+        main: ["./dist/*.min.js", "./dist/assets/*.min.css", "./dist/assets/*.gif"]
       }
     }
   })).pipe(gulp.dest('dist/lib'));

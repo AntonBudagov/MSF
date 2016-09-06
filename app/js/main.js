@@ -29,9 +29,35 @@
         myMap.geoObjects
             .add(myPlacemark1)
 
-    }
+    };
     // #Moadl###################################################################
 
-    $('.modal-trigger').leanModal();
+    $('.modal-trigger').leanModal({
+        starting_top: '0%',
+    });
+    // $('#modal3').openModal();
+    // $('#modal2').openModal();
+    // #Carusel#################################################################
+    var clienAboutUsCarusel, owl;
+    clienAboutUsCarusel = {
+        loop: false,
+        margin: 0,
+        items: 1,
+        nav: true,
+        dots: false
+    };
+
+    owl = $('.clienAboutUsCarusel');
+
+    $('.UserReviewCarusel').owlCarousel(clienAboutUsCarusel)
+
+    $('.clienAboutUsCarusel').on('initialized.owl.carousel changed.owl.carousel', function(e) {
+        if (!e.namespace) return
+            var carousel = e.relatedTarget
+        //owl_carousel_page_numbers(e);
+        $('.counter').html('<span class="active">'+(carousel.relative(carousel.current())+1)  + '</span><span>/</span><span>' + carousel.items().length+ '</span>')
+    }).owlCarousel(clienAboutUsCarusel)
 
 })(window);
+
+

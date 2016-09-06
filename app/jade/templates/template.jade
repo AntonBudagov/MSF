@@ -14,10 +14,18 @@ html
     meta(charset='utf-8')
     meta(content='', name='keywords')
     meta(content='', name='description')
-    meta(content='width=device-width' name='viewport')
+    meta(content='width=device-width, initial-scale=1' name='viewport')
     meta(content='#fff', name='msapplication-TileColor')
     meta(content='#fff', name='theme-color')
+
+    link(rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css")
+    link(rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.theme.default.min.css")
+
+    link(rel='stylesheet' href='lib/owl.carousel/owl-carousel/owl.carousel.css')
+
     link(rel='stylesheet' href='css/main.css')
+
+    //- link(rel='stylesheet' href='lib/owl.carousel/dist/assets/owl.carousel.min.css')
     block title
 
   body
@@ -27,15 +35,19 @@ html
     //- CSS
     //- link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css")
     //- JS
-    script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+    //- script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+    script(type='text/javascript' src="lib/jquery/dist/jquery.min.js")
+    //- script(src="lib/owl.carousel/owl-carousel/owl.carousel.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.min.js")
+    //- script(src="lib/owl.carousel/owl-carousel/owl.carousel.min.js")
+
+
+
     script(src="lib/materialize/js/velocity.min.js")
     script(src="lib/materialize/js/leanModal.js")
     //- script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js")
     //- CDN============================
 
     //- Main Js
-    script(type='text/javascript',  src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU&scroll=false")
+    script(type='text/javascript', src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU&scroll=false")
     script(src="js/main.js")
-
-    a.waves-effect.waves-light.btn.modal-trigger(href='#modal1') Modal
-
