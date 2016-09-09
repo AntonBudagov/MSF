@@ -1,0 +1,135 @@
+.dot
+  position: absolute
+  width: 4px
+  height: 4px
+  border-radius: 50%
+  background-color: #fff
+  box-shadow: 0px 0px 0 3px #8a8573
+  top: auto
+  right: auto
+  bottom: -16px
+  left: 142.5px
+
+.popup._type_normal
+  background-color: #fff
+  box-shadow: 0 0 0 1px rgba(0,0,0,.06),0 10px 20px -5px rgba(0,0,0,.4)
+  border-radius: 1px
+  width: 290px
+  position: relative
+  margin-left: -145px
+  margin-top: -70px
+
+.popup__arrow
+  position: absolute
+  overflow: hidden
+  width: 14px
+  height: 14px
+  top: auto
+  right: auto
+  bottom: -14px
+  left: 137.5px
+  &:before
+    background-color: #fff
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.1)
+    top: -5px
+    left: 2px
+    content: ''
+    position: absolute
+    transform: rotate(45deg)
+    width: 10px
+    height: 10px
+
+.popup__content
+  position: relative
+
+.whats-here-preview
+  padding: 10px 10px 10px 15px
+
+.whats-here-preview__main
+  margin-right: 72px
+  padding-right: 10px
+
+.whats-here-preview__title
+  text-decoration: none
+  color: #04b
+  cursor: pointer
+  line-height: 21px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  font-size: 13px
+
+.whats-here-preview__coords
+  color: #999
+  line-height: 21px
+  font-size: 11px
+  white-space: nowrap
+
+.whats-here-preview__coords
+  color: #999
+  line-height: 21px
+  font-size: 11px
+  white-space: nowrap
+
+.whats-here-preview__route
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  width: 66px
+  border-left: 1px solid rgba(0,0,0,.1)
+  background: url(//yastatic.net/maps-beta/_/Pnp4r7V6rNjM_Y00VN11ekQ7tAc.svg) center center no-repeat
+  cursor: pointer
+
+.controls_zoom
+  margin-top: 120px
+  display: none
+
+#zoom-in,
+#zoom-out
+  transform: scale(.7)
+  position: relative
+  display: inline-block
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  vertical-align: middle;
+  text-align: left;
+  cursor: pointer;
+  width: 50px
+  height: 50px
+  user-select: none;
+  background-image: none;
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: #fff
+  background-color: #fff;
+  font-size: 15px;
+  line-height: 36px
+  border-radius: 36px
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.12),0 5px 10px -3px rgba(0,0,0,.3)
+
+
+
+#zoom-in
+  .icon-plus
+    width: 100%
+    height: 100%
+    pointer-events: none
+    opacity: .7;
+    background: url(../images/icons/plus.svg) center center no-repeat
+    display: block
+
+#zoom-out
+  .icon-minus
+    width: 100%
+    height: 100%
+    pointer-events: none
+    opacity: .7;
+    background: url(../images/icons/minus.svg) center center no-repeat
+    display: block
+
+@media #{$medium}
+  .controls_zoom
+
+    display: block

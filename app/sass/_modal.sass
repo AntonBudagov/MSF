@@ -43,9 +43,9 @@
       color: #878787
       font-size: 16px
       line-height: 24px
-    ul
+    .list
       margin-top: 26px
-      li
+      p
         color: #878787
         font-size: 16px
         line-height: 30px
@@ -80,9 +80,7 @@
     .wrappImg
       float: left
       margin-right: 37px
-    .title
-      color: #231f20
-      font-weight: 700
+    strong
       line-height: 22px
       margin-bottom: 28px
     p
@@ -91,26 +89,31 @@
       line-height: 24px;
       margin-bottom: 12px
 
-    .qoute
-      color: rgba(48, 100, 151, 0.76)
-      font-family: HelveticaNeueCyr;
-      font-size: 20px
-      font-weight: 300
-      line-height: 28px
-      padding-left: 20px
+    blockquote
+      p
+        color: rgba(48, 100, 151, 0.76)
+        font-family: HelveticaNeueCyr;
+        font-size: 20px
+        font-weight: 300
+        line-height: 28px
+        padding-left: 20px
 
 .clienAboutUsModal
   width: 100%
   height: 100%
-  max-height: 100%
+  max-height: inherit
   max-width: 605px
   top: 0!important
 
+  .modal-content
+    padding: 0
+
+
 @media #{$medium}
   .clienAboutUsModal
-    max-height: 100%
+    max-height: inherit
     max-width: 605px
-
+    height: auto
   .modalCompany
     padding: 40px 0 88px
     h2

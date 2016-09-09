@@ -76,11 +76,27 @@
 .UserReviewCarusel.owl-carousel
   .owl-controls, .owl-nav
     .owl-prev, .owl-next
-      margin-top: 120px
+      margin-top: 43px
 
   .owl-stage-outer
     overflow: hidden
 
 @media #{$medium}
+
+  .UserReviewCarusel.owl-carousel
+    .owl-stage-outer
+      overflow: visible
+
+  // .owl-nav
+  //   visibility: visible
+
+@media #{$large}
   .owl-nav
     visibility: visible
+
+@media #{$xLarge}
+  .owl-nav
+
+    max-width: 1400px
+    left: 50%
+    margin-left: -750px

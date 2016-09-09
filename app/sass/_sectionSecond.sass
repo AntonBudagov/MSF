@@ -3,15 +3,16 @@
   position: relative
   z-index: 2
   margin-top: 0
-  .skew
-    min-height: 970px
 
+  .skew
+    padding-bottom: 60px
     .title
       text-align: center
     h2
-      padding-top: 73px
+      // padding-top: 23px
       color: #231f20
       margin-bottom: 9px
+      padding-top: 10%
 
   .groupCompany
     margin: 0 auto
@@ -58,8 +59,21 @@
           font-weight: 400
           line-height: 22px
 
+
+// @media #{$medium}
+//   .sectionSecond
+//     margin-top: -100px
+
 @media #{$xLarge}
   .sectionSecond
     margin-top: -170px
+    .skew
+      padding-bottom: 0
+      &:before
+        height: 120%
+      h2
+        // margin-top: 10%
+        padding-top: 73px
     .groupCompany
       max-width: 100%
+

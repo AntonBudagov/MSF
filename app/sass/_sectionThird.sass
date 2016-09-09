@@ -1,13 +1,15 @@
 .sectionThird
   width: 100%
   position: relative
-  background-image: url(../images/back.svg)
+  background-image: url(../images/icons/back.svg)
   height: 100%
   background-color: #306497
   background-repeat: no-repeat
   padding-bottom: 60px
+  background-position: 0
   h2
-    margin-top: 82px
+    padding-top: 23px
+    margin-top: 10%
   .description
     max-width: 1140px
     text-align: center
@@ -16,13 +18,19 @@
       margin: 40px auto
       position: relative
       display: flex
-      justify-content: center
-      align-content: center
-      align-items: center
+      // justify-content: center
+      // align-content: center
+      // align-items: center
       width: 233px;
       height: 180px;
       img
         z-index: 2
+        position: absolute
+        left: 0
+        right: 0
+        margin: auto
+        top: -25%
+        bottom: 0
       &:before
         position: absolute
         content: ''
@@ -74,16 +82,15 @@
 
 .sliderUser
   .skew
-    min-height: 743px
-    padding-bottom: 60px
+    padding-bottom: 10%
   .user
     margin: 0 auto
     text-align: center
     position: relative
 
     .avatarUser
-
-      width: 305px
+      width: 100%
+      max-width: 305px
       height: 250px
       transform: rotate(3deg) translateY(0px) scale(1) skew(4deg, 7deg) translateX(0px)
       overflow: hidden
@@ -127,7 +134,7 @@
   .leftText,
   .rightText
     margin: 0 auto
-    max-width: 558px
+    max-width: 90%
     width: 100%
 
     p
@@ -135,33 +142,42 @@
       line-height: 21px
 
 
-
-@media #{$xLarge}
+@media #{$medium}
+.sectionThird
+  padding-bottom: 100px
+@media #{$large}
   .sectionThird
-    height: 808px
-    padding-bottom: 0px
+    height: 1202px
+    padding-bottom: 0
+    background-image: url(../images/icons/back.jpg)
+    margin-top: -133px
+    h2
+      padding-top: 250px
+
+      .description
+        .brend
+          margin: 60px auto 25px
+
+
   .sliderUser
+
     .skew
-      padding-bottom: 0
+      padding-bottom: 7%
     .user
       margin: 0 auto
       text-align: center
       position: absolute
-      top: -158px
+      top: -302px
       left: 0
       right: 0
 
     .description
-      padding-top: 277px
+      padding-top: 135px
 
     .leftText,
     .rightText
-      margin: auto
+      margin: 0
+      max-width: 558px
+      width: 50%
 
 
-
-
-// $small: "(min-width: 768px)"
-// $medium: "(min-width: 1024px)"
-// $large: "(min-width: 1200px)"
-// $xLarge: "(min-width: 1400px)"

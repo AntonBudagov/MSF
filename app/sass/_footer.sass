@@ -7,16 +7,19 @@
   align-items: center
   z-index: 3
   position: relative
-
+  .copyright
+    font-size: 14px
 .contact
   position: relative
   width: 100%
-  height: 668px
+  height: auto
+  .wrappContentInfo
+    position: relative
   .wrappContent
     padding: 0
   .contactInfo
     width: 385px
-    height: 524px
+    height: auto
     color: #fff
     position: relative
     top: 0
@@ -27,18 +30,20 @@
       padding: 35px
 
     .skew
-
+      height: auto
       &:before
         background-color: #dc812e
+        max-height: 524px
       &:after
         content: ''
         position: absolute
         left: 0
         top: 0
-        bottom: -25px
+        bottom: -7.6vw
         overflow: visible
         width: 100%
-        background-image: url(../images/backContact.svg)
+        background-image: url(../images/icons/backContact.svg)
+
         background-position: bottom
         background-repeat: no-repeat
         z-index: -1
@@ -56,7 +61,9 @@
       font-family: $defaultFontBold
       text-transform: uppercase
       margin-top: 30px
-      margin-bottom: 8px
+      margin-bottom: 0px
+      &:first-of-type
+        margin-top: 0
     p,
     a
       font-size: 18px
@@ -70,24 +77,56 @@
 #map
   width: 100%
   height: 320px
-  margin-top: -176px
-@media #{$xLarge}
+  margin-top: -10vw
+
+@media #{$medium}
   #map
     height: 100%
-    margin-top: 0
+    margin-top: 0px
+
   .contact
     position: relative
     width: 100%
-    margin: -125px auto 0
+    margin: -170px auto 0
     height: 668px
     .contactInfo
       width: 385px
       height: 524px
       color: #fff
-      right: 242px
+      right: 20px
       position: absolute
-      top: 0
+      top: 102px
+      address
+        max-width: 250px
+      .skew
+        &:after
+          bottom: -15%
+          background-image: url(../images/icons/contactInfoBack.svg)
       .wrappContact
         text-align: left
         height: 460px
         padding: 63px 36px 0px 46px
+
+
+
+
+@media #{$large}
+  .contact
+    .contactInfo
+      top: 102px
+      right: 20px
+
+@media #{$xLarge}
+  .contact
+    .contactInfo
+      top: 102px
+      right: 20px
+
+      // right: 409px
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+  .contact
+    .contactInfo
+
+      top: 0
+      right: 0px

@@ -1,10 +1,12 @@
 .sectionFirst
   width: 100%
   position: relative
-  background-image: url(../images/bg.svg)
-  background-position: center bottom
-  height: 1022px
+  background-image: url(../images/icons/bg.svg), url(../images/icons/backTop.png)
+  background-position: center bottom, center top
+  background-repeat: no-repeat, no-repeat
+  min-height: auto
   background-color: #306497
+  padding-bottom: 60px
   .header
     .flexB
       justify-content: space-between
@@ -12,6 +14,8 @@
       align-items: flex-start
     .address
       margin-top: 21px
+      text-align: right
+      display: flex
       .phone
         color: #fff
         text-decoration: none
@@ -27,7 +31,7 @@
         white-space: nowrap
 
   .description
-    max-width: 830px
+    max-width: 890px
     margin: 0 auto
 
     h1
@@ -53,41 +57,61 @@
       line-height: 30px
 
   .infoCompany
-    max-width: 830px
-    justify-content: flex-start
+    max-width: 840px
     margin-top: 24px
-    .info
-      color: #fff
+    color: #fff
+    width: 100%
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-direction: column
+    min-height: 200px
+    .groupInfo
       display: flex
-      width: 100%
-      .number
-        display: flex
-        align-items: center
-        width: 100%
-        flex-direction: column
-        text-align: center
-        span
-          &:first-child
-            font-size: 50px
-            font-family: $defaultFontBold
-            line-height: normal
-        span
-          &:last-child
-            padding-left: 14px
-            font-size: 24px
-            font-weight: 300
-            line-height: 24px
+      float: left
+      align-items: center
+
+      .number, .name
+        width: auto
+
+
+    .number
+      font-size: 60px
+      font-family: $defaultFontBold
+      line-height: normal
+      white-space: nowrap
+      vertical-align: middle
+    .name
+      margin-left: 12px
+      font-size: 16px
+      font-weight: 300
+      line-height: 24px
+      text-align: left
+      vertical-align: middle
+
+
+@media #{$small}
+  .sectionFirst
+    .header
+      .address
+        display: block
+        .phone
+          padding-right: 0
 
 @media #{$medium}
   .sectionFirst
+    min-height: auto
+    padding-bottom: 0px
     .header
       padding: 28px 0 0 0
 
       .address
         margin-top: 21px
+        display: flex
         .phone
           display: inline
           margin-bottom: 0px
+          padding-right: 20px
 
 
     .description
@@ -99,28 +123,49 @@
 
     .infoCompany
       margin-top: 48px
-      .info
-        width: auto
-        .number
-          flex-direction: row
-          &:first-child
-            width: 200px
-            margin-right: 47px
-          &:nth-child(2)
-            width: 175px
-            margin-right: 65px
-          span
-            &:first-child
-              font-size: 100px
-              font-family: $defaultFontBold
-              line-height: 73px
-          span
-            &:last-child
-              padding-left: 14px
-              font-size: 24px
-              font-weight: 300
-              line-height: 24px
+      flex-direction: row
+      .groupInfo
+        display: flex
+        float: left
+        align-items: center
+        &:first-child
+          width: auto
+          .number
+            width: 112px
+          .name
+            margin-left: 0
+            width: 90px
+        &:nth-child(2)
+          width: auto
+          .number
+            width: 60px
+          .name
+            width: 130px
+        &:last-child
+          width: auto
+          .number
+            width: 230px
+          .name
+            width: 135px
+
+      .number
+        font-size: 100px
+        font-family: $defaultFontBold
+        line-height: 73px
+        white-space: nowrap
+        vertical-align: middle
+      .name
+        margin-left: 12px
+        font-size: 24px
+        font-weight: 300
+        line-height: 24px
+        text-align: left
+        vertical-align: middle
+
     .desc
       p
         font-size: 24px
 
+@media #{$xLarge}
+  .sectionFirst
+    min-height: 1022px
